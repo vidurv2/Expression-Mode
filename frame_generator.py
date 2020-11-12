@@ -49,4 +49,4 @@ def generate_frames(video_dir, output_dir, frame_rate):
     cv2.destroyAllWindows()
 
 
-generate_frames(video_dir='/Users/i537782/Desktop/sample.mp4', output_dir='frames', frame_rate=1)
+generate_frames(video_dir='/Users/i537782/Desktop/sample.mp4', output_dir='frames', frame_rate=3)
