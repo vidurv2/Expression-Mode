@@ -1,0 +1,2 @@
+#opencv-python==4.4.0.46
+#bounding-box==0.1.3
