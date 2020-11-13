@@ -5,6 +5,7 @@ import constants
 import cv2
 import time
 import shutil
+from PIL import Image
 
 
 class Controller:
@@ -20,7 +21,8 @@ class Controller:
 
         # API Config
         # image_url = 'https://raw.githubusercontent.com/Azure-Samples/cognitive-services-sample-data-files/master/ComputerVision/Images/faces.jpg'
-        headers = {'Ocp-Apim-Subscription-Key': subscription_key}
+        headers = {'Content-Type': 'application/octet-stream',
+                   'Ocp-Apim-Subscription-Key': subscription_key}
         params = {
             'detectionModel': 'detection_01',
             'returnFaceAttributes': 'age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise',
@@ -34,31 +36,10 @@ class Controller:
         return response.json()
 
     def outputDisplay(self, result):
-        num_faces = len(result)
-        img = cv2.imread("Output Display/test_img.jpeg", 1)
-        for i in range(num_faces):
-            start_x = result[i]["faceRectangle"]["left"]
-            start_y = result[i]["faceRectangle"]["top"]
-            end_x = start_x + result[i]["faceRectangle"]["width"]
-            end_y = start_y + result[i]["faceRectangle"]["height"]
-            cv2.rectangle(img, (start_x, start_y),
-                          (end_x, end_y), (0, 0, 255), 2)
-            emotions_dict = result[i]["faceAttributes"]["emotion"]
-            highest_emotion = max(emotions_dict.items(),
-                                  key=operator.itemgetter(1))[0]
-            cv2.rectangle(img, (start_x, end_y), (end_x, end_y+25),
-                          (0, 0, 255), cv2.FILLED)
-            cv2.putText(img, highest_emotion, (start_x, end_y+13),
-                        cv2.FONT_HERSHEY_DUPLEX, 0.5, (255, 255, 255), 1)
-            # cv2.putText(img , highest_emotion,(start_x-5,start_y-5),cv2.FONT_HERSHEY_SIMPLEX,0.5,(255,255,255), 2)
+        # Vidur's Code
+        pass
 
-        cv2.imshow("Image", img)
-        cv2.moveWindow("Image", 0, 0)
-
-        cv2.waitKey(0)
-        cv2.destroyAllWindows()
-
-    def inputConfig(self, video_dir, output_dir, frame_rate):
+    def main(self, video_dir, output_dir, frame_rate):
         # Creating a VideoCapture object to read the video
         if not os.path.exists(output_dir):
             os.mkdir(output_dir)
