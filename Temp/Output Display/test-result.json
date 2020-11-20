@@ -1,0 +1,82 @@
+ [
+  {
+    "faceRectangle": {
+      "top": 114,
+      "left": 212,
+      "width": 65,
+      "height": 65
+    },
+    "faceAttributes": {
+      "emotion": {
+        "anger": 0.0,
+        "contempt": 0.0,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "happiness": 1.0,
+        "neutral": 0.0,
+        "sadness": 0.0,
+        "surprise": 0.0
+      }
+    }
+  },
+  {
+    "faceRectangle": {
+      "top": 141,
+      "left": 331,
+      "width": 52,
+      "height": 52
+    },
+    "faceAttributes": {
+      "emotion": {
+        "anger": 0.0,
+        "contempt": 0.0,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "happiness": 0.999,
+        "neutral": 0.0,
+        "sadness": 0.0,
+        "surprise": 0.0
+      }
+    }
+  },
+  {
+    "faceRectangle": {
+      "top": 110,
+      "left": 70,
+      "width": 51,
+      "height": 51
+    },
+    "faceAttributes": {
+      "emotion": {
+        "anger": 0.0,
+        "contempt": 0.0,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "happiness": 1.0,
+        "neutral": 0.0,
+        "sadness": 0.0,
+        "surprise": 0.0
+      }
+    }
+  },
+  {
+    "faceRectangle": {
+      "top": 116,
+      "left": 459,
+      "width": 45,
+      "height": 45
+    },
+    "faceAttributes": {
+      "emotion": {
+        "anger": 0.0,
+        "contempt": 0.0,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "happiness": 1.0,
+        "neutral": 0.0,
+        "sadness": 0.0,
+        "surprise": 0.0
+      }
+    }
+  }
+]
